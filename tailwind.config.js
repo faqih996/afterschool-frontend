@@ -3,6 +3,8 @@ module.exports = {
   content: [],
   presets: [],
   purge : [],
+  prefix: "",
+  separator: ":",
   target : 'relaxed',
   important : 'false',
   darkMode: 'media', // or 'class'
@@ -11,6 +13,12 @@ module.exports = {
       ...theme('colors'),
       auto: 'auto',
     }),
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+    },
     animation: {
       none: 'none',
       spin: 'spin 1s linear infinite',
@@ -500,6 +508,7 @@ module.exports = {
       5: 'repeat(5, minmax(0, 1fr))',
       6: 'repeat(6, minmax(0, 1fr))',
     },
+    
     height: ({ theme }) => ({
       auto: 'auto',
       ...theme('spacing'),
