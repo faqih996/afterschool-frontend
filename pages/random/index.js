@@ -6,19 +6,19 @@ function Random({data}) {
     return (
         <>
             <Head>
-                <title>Micro | Courses</title>
+                <title>AfterSchool | Courses</title>
             </Head>
 
             <main className="container mx-auto mt-12">
-                <h1 className="text-3xl font-bold">
+                <h1 className="text-3xl font-bold text-blue-900">
                     Fetching random words
                 </h1>
                 <ul>
                     {data.map((todo) => {
                         return (
-                            <li key={todo.id} className="px-5 border border-indigo-700">
+                            <li key={todo.id} className="p-4 border border-blue-600">
                                 {todo?.title ?? "-"}{" "}
-                                <Link href={`/courses/${todo.id}`}>
+                                <Link href={`/random/${todo.id}`}>
                                     Launch
                                 </Link>
                             </li>

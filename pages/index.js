@@ -10,7 +10,7 @@ function Home(props) {
         <>
             <Head>
                 <title>
-                    After School
+                    AfterSchool
                 </title>
             </Head>
 
