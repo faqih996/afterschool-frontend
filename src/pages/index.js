@@ -4,13 +4,16 @@ import Image from 'next/image'
 
 
 import axios from "/src/configs/axios";
+
 import Circle from "public/images/circle-accent-1.svg"
+
+import Header from "src/parts/Header";
 
 function Home(props) {
     console.log(props);
     return (
         
-        <div className="container mx-auto mt-4">
+        <>
             <Head>
                 <title>
                     AfterSchool
@@ -19,10 +22,10 @@ function Home(props) {
 
             <main>
                 <section className="min-h-screen pt-10 header-clipping md:min-h-0">
+                    <Circle className="absolute bottom-0 left-0"></Circle>
                     <div className="max-w-full sunshine"></div>
-                        <Circle className="absolute bottom-0 left-0"></Circle>
                     <div className="container px-4 mx-auto">
-                        {/* <Header></Header> */}
+                        <Header></Header>
                         {/* <Hero></Hero> */}
                     </div>
                 </section>
@@ -43,7 +46,7 @@ function Home(props) {
                     {/* <Footer></Footer> */}
                 </section>
             </main>
-        </div>
+        </>
         
     )
 }
